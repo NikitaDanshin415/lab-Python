@@ -1,0 +1,61 @@
+S=str(input('vvedite stroky = '))
+print(S.replace(' ', 'O'))
+//////////////////////////////////
+
+S1=str(input('vvedite stroky 1 = '))
+S2=str(input('vvedite stroky 2 = '))
+S3=''
+
+j=0
+q=0
+
+if len(S1)==len(S2):
+	for i in range(0,len(S1)+len(S2)):
+		if (i+1) % 2==0:
+			S3+=S1[j]
+			j += 1
+		else:
+			S3+=S2[q]
+			q += 1
+print(S3)
+
+//////////////////////////////////
+s=str(input("vvedite stroky = "))
+j=0
+s1=""
+s2=""
+s=s+" "
+for i in range (0,len(s)):
+	if s[i]==" ":	
+		s1=" "
+		for q in range(j,i):
+			s1=s1+s[q]
+		j=i
+		s2=s2+s1[::-1]
+for i in range (0,len(s)):
+	if s[i]==" ":
+		print(s2)
+    
+    //////////////////////////////////
+    
+s1=str(input('введите строку 1 = '))
+s2=str(input('введите строку 2 = '))
+
+for i in range (0,len(s1)):
+	ind=0
+	for j in range (0,len(s2)): 
+		if s1[i] == s2[j]: 
+			ind=1	
+	if ind==0:
+		print(s1[i])
+
+for i in range (0,len(s2)):
+	ind=0
+	for j in range (0,len(s1)): 
+		if s2[i] == s1[j]:
+			ind=1
+	if ind==0:
+		print (s2[i])
+    
+        
+    //////////////////////////////////
