@@ -1,0 +1,61 @@
+import math
+x=1
+y=2
+q = (x>=0) and (y**2!=4)
+print(q)
+
+/////////////////////////////////////////////////
+
+import math
+n=float(input("N="))
+q =(n % 3 !=0) and (n % 7 ==0) and (n % 10 ==0)
+print(q)
+
+/////////////////////////////////////////////////
+
+import math
+x=float(input("x="))
+y=float(input("y="))
+q=  y>abs(x) and y<(-x**2+2)
+print(q)
+
+
+//////////////////////////////////////////////////////////////////
+
+import math
+a1=float(input("a1="))
+b1=float(input("b1="))
+c1=float(input("c1="))
+a2=float(input("a2="))
+b2=float(input("b2="))
+c2=float(input("c2="))
+P1=(a1+b1+c1)/2
+S1=math.sqrt(P1*(P1-a1)*(P1-b1)*(P1-c1))
+P2=(a2+b2+c2)/2
+S2=math.sqrt(P2*(P2-a2)*(P2-b2)*(P2-c2))
+if S1>S2:
+	print('max=',round(S1,2))
+else:
+	print('max=',round(S2,2))
+
+////////////////////////////////////////////////////////////
+
+import math
+x=int(input("C1="))
+y=int(input("C2="))
+q=int(input("C1*C2="))
+l = x*y
+if (x>-10 and x<10) and (y>-10 and y<10) and (x*y == q):
+	print('verno')
+else:
+	print('ne verno pravilniy otvet = ',x*y)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
