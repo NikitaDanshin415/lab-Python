@@ -20,21 +20,36 @@ if len(S1)==len(S2):
 print(S3)
 
 //////////////////////////////////
-s=str(input("vvedite stroky = "))
-j=0
-s1=""
-s2=""
-s=s+" "
-for i in range (0,len(s)):
-	if s[i]==" ":	
-		s1=" "
-		for q in range(j,i):
-			s1=s1+s[q]
-		j=i
-		s2=s2+s1[::-1]
-for i in range (0,len(s)):
-	if s[i]==" ":
-		print(s2)
+
+def invert (strs,i_start,i_end):
+	strs = strs[i_start:i_end]
+	local_str = ""
+	i_local = len(strs)
+	while i_local > 0:
+		local_str = local_str + strs[i_local-1]
+		i_local = i_local - 1
+	return local_str;
+
+
+mystr = input("введите предложение\n");
+mystr = mystr + " ";
+
+i = 0;
+i_word = -1;
+newstr = "";
+
+while i < len(mystr):
+	if (mystr[i]!=' ' and i_word < 0):
+		i_word = i
+
+	if (mystr[i]==' ' and i_word >= 0):
+		newstr = newstr + invert(mystr,i_word,i) + " "
+		i_word = -1
+
+	i=i+1
+
+
+print(newstr);
     
     //////////////////////////////////
     
