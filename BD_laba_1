@@ -1,4 +1,4 @@
------------------1 Задание------------------------------
+/*-----------------1 Задание------------------------------*/
 
 CREATE TABLE t_messure (
   id_messure INT NOT NULL,
@@ -116,7 +116,7 @@ CREATE TABLE t_deliver (
         REFERENCES t_store(id_store) ON DELETE CASCADE
 );
 
---------------------2 Задание------------------------------
+/*-----------------2 Задание------------------------------*/
 
 ALTER TABLE t_caterer 
 	DROP COLUMN address;
@@ -126,13 +126,13 @@ ALTER TABLE t_caterer
 	  email NVARCHAR2(20) NOT NULL
 );
 
--------------------3 Задание---------------------
+/*-----------------3 Задание------------------------------*/
 
 ALTER TABLE t_inprice
   ADD CONSTRAINT pk_inprice
 	  PRIMARY KEY (id_material, price_date);
 
------------------4 Задание-----------------
+/*-----------------4 Задание------------------------------*/
 
  CREATE TABLE t_group (
   id_group INT NOT NULL,
@@ -146,7 +146,7 @@ ALTER TABLE T_MATERIAL
     FOREIGN KEY (id_group) 
       REFERENCES t_group(id_group) ON DELETE SET NULL;
 
-----------------5 Задание-----------------
+/*-----------------5 Задание------------------------------*/
 
 ALTER TABLE t_section
   MODIFY (NAME NVARCHAR2(30));
